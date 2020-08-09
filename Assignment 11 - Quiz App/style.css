@@ -1,0 +1,92 @@
+/* By - Syed Ali Jawwad Zaidi */
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--hue-neutral: 200;
+	--hue-wrong: 0;
+	--hue-correct: 145;
+}
+
+body {
+	--hue: var(--hue-neutral);
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+	--hue: var(--hue-correct);
+}
+
+body.wrong {
+	--hue: var(--hue-wrong);
+}
+
+.container {
+	width: 800px;
+	max-width: 80%;
+	background-color: white;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: #212122 0 0 20px 5px;
+}
+
+.btn-grid {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	gap: 10px;
+	margin: 20px 0;
+}
+
+.btn {
+	--hue: var(--hue-neutral);
+	padding: 15px 10px;
+	background-color: hsl(var(--hue), 100%, 35%);
+	border: 0px;
+	border-radius: 5px;
+	outline: none;
+	color: white;
+}
+
+.btn:hover {
+	background-color: #212122;
+	color: white;
+}
+
+.btn.correct {
+	--hue: var(--hue-correct);
+	color: white;
+}
+
+.btn.wrong {
+	--hue: var(--hue-wrong);
+	color: white;
+}
+
+#start-btn,
+#next-btn {
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: 10px 20px;
+	margin: 0 2px;
+	color: white;
+}
+
+.controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hide {
+	display: none;
+}
